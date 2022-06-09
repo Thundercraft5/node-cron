@@ -1,13 +1,15 @@
 {
 	"extends": "@thundercraft5/tsconfig/node18-decl.tsconfig.json",
 	"compilerOptions": {
+		"incremental": false,
 		"module": "esnext",
-		"declarationDir": "dist"
+		"declarationDir": "dist/types"
 	},
 	"include": [
 		"**/*.ts",
 	],
 	"exclude": [
-		"node_modules"
+		"node_modules",
+		"dist"
 	]
 }
