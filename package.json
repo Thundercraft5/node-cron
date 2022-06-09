@@ -1,6 +1,6 @@
 {
 	"name": "@thundercraft5/node-cron-jobs",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"type": "module",
 	"keywords": [
 		"large",
@@ -9,6 +9,13 @@
 		"job",
 		"manager"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thundercraft5/node-cron-jobs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/thundercraft5/node-cron-jobs/issues"
+	},
 	"scripts": {
 		"prepublish": "npm run build",
 		"build:esm": "esbuild src/index.ts --outdir=dist/esm --sourcemap --bundle --platform=node --format=esm --target=esnext",
