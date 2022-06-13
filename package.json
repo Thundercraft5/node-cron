@@ -1,5 +1,5 @@
 {
-	"name": "@thundercraft5/node-cron-jobs",
+	"name": "@thundercraft5/node-cron-manager",
 	"version": "1.0.3",
 	"type": "module",
 	"keywords": [
@@ -11,10 +11,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/thundercraft5/node-cron-jobs.git"
+		"url": "https://github.com/thundercraft5/node-cron-manager.git"
 	},
 	"bugs": {
-		"url": "https://github.com/thundercraft5/node-cron-jobs/issues"
+		"url": "https://github.com/thundercraft5/node-cron-manager/issues"
 	},
 	"scripts": {
 		"prepublish": "npm run build",
@@ -42,12 +42,14 @@
 		"@rollup/plugin-commonjs": "22.0.0",
 		"@rollup/plugin-node-resolve": "13.3.0",
 		"@rollup/plugin-typescript": "8.3.3",
-		"@thundercraft5/eslint-plugin": "file:../../Libraries/NodeJS/eslint-plugin",
-		"@thundercraft5/tsconfig": "file:../../Libraries/NodeJS/tsconfig",
+		"@thundercraft5/eslint-plugin": "file:../eslint-plugin",
+		"@thundercraft5/tsconfig": "file:../tsconfig",
 		"@types/node-cron": "3.0.1",
 		"del-cli": "4.0.1",
 		"eslint": "8.17.0",
 		"rollup": "2.75.6",
+		"rollup-plugin-node": "0.1.5",
+		"rollup-plugin-node-globals2": "2.0.0",
 		"ts-node": "10.8.1",
 		"typescript": "4.8.0-dev.20220604"
 	}
