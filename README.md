@@ -1,4 +1,4 @@
-# node-cron-jobs
+# node-cron-manager
 A library to manage large-scale cron jobs.
 
 # Usage
