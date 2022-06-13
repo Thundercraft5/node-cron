@@ -1,14 +1,11 @@
-
 import { TypeError } from "@thundercraft5/node-errors";
-	
-import CronError from "./CronError";
-import { cronJobRegex } from "./validateInterval";
 
+import CronError from "./CronError";
 import type { ScheduledTask } from "node-cron";
 
-import type { CronFunc } from "./CronJobManager";
-import type CronJobManager from "./CronJobManager";
+import type { CronFunc, default as CronJobManager } from "./CronJobManager";
 
+import { cronJobRegex } from "./validateInterval";
 
 export default class CronJob<I extends string = string> {
 	cronTask: ScheduledTask;

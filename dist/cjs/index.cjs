@@ -433,9 +433,9 @@ var require_scheduler = __commonJS({
   }
 });
 
-// ../../node_modules/uuid/lib/rng.js
+// ../../../node_modules/uuid/lib/rng.js
 var require_rng = __commonJS({
-  "../../node_modules/uuid/lib/rng.js"(exports, module2) {
+  "../../../node_modules/uuid/lib/rng.js"(exports, module2) {
     var crypto = require("crypto");
     module2.exports = function nodeRNG() {
       return crypto.randomBytes(16);
@@ -443,9 +443,9 @@ var require_rng = __commonJS({
   }
 });
 
-// ../../node_modules/uuid/lib/bytesToUuid.js
+// ../../../node_modules/uuid/lib/bytesToUuid.js
 var require_bytesToUuid = __commonJS({
-  "../../node_modules/uuid/lib/bytesToUuid.js"(exports, module2) {
+  "../../../node_modules/uuid/lib/bytesToUuid.js"(exports, module2) {
     var byteToHex = [];
     for (i = 0; i < 256; ++i) {
       byteToHex[i] = (i + 256).toString(16).substr(1);
@@ -481,9 +481,9 @@ var require_bytesToUuid = __commonJS({
   }
 });
 
-// ../../node_modules/uuid/v1.js
+// ../../../node_modules/uuid/v1.js
 var require_v1 = __commonJS({
-  "../../node_modules/uuid/v1.js"(exports, module2) {
+  "../../../node_modules/uuid/v1.js"(exports, module2) {
     var rng = require_rng();
     var bytesToUuid = require_bytesToUuid();
     var _nodeId;
@@ -549,9 +549,9 @@ var require_v1 = __commonJS({
   }
 });
 
-// ../../node_modules/uuid/v4.js
+// ../../../node_modules/uuid/v4.js
 var require_v4 = __commonJS({
-  "../../node_modules/uuid/v4.js"(exports, module2) {
+  "../../../node_modules/uuid/v4.js"(exports, module2) {
     var rng = require_rng();
     var bytesToUuid = require_bytesToUuid();
     function v4(options, buf, offset) {
@@ -575,9 +575,9 @@ var require_v4 = __commonJS({
   }
 });
 
-// ../../node_modules/uuid/index.js
+// ../../../node_modules/uuid/index.js
 var require_uuid = __commonJS({
-  "../../node_modules/uuid/index.js"(exports, module2) {
+  "../../../node_modules/uuid/index.js"(exports, module2) {
     var v1 = require_v1();
     var v4 = require_v4();
     var uuid = v4;
@@ -765,9 +765,6 @@ __export(src_exports, {
 });
 module.exports = __toCommonJS(src_exports);
 
-// src/CronJobManager.ts
-var import_node_cron = __toESM(require_node_cron(), 1);
-
 // node_modules/@thundercraft5/node-errors/dist/index.js
 function formatWordList(list, and = false) {
   const last = list.pop(), lastWord = and ? "and" : "or";
@@ -925,6 +922,9 @@ var CronJob = class {
     this.cronTask.start();
   }
 };
+
+// src/CronJobManager.ts
+var import_node_cron = __toESM(require_node_cron(), 1);
 
 // src/CronSet.ts
 var CronSet = class extends Set {

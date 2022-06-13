@@ -1,6 +1,6 @@
-/* eslint-disable no-dupe-class-members */
-import CronJob from "./CronJob";
+
 import CronError from "./CronError";
+import CronJob from "./CronJob";
 import validateInterval from "./validateInterval";
 
 export default class CronSet<I extends string = string> extends Set<CronJob> {

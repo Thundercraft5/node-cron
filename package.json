@@ -18,7 +18,7 @@
 	},
 	"scripts": {
 		"prepublish": "npm run build",
-		"build:esm": "esbuild src/index.ts --outdir=dist/esm --sourcemap --bundle --platform=node --format=esm --target=esnext",
+		"build:esm": "rollup -c -m -f es --preferConst -i ./src/index.ts -o ./dist/esm/index.js",
 		"build:cjs": "esbuild src/index.ts --outfile=dist/cjs/index.cjs --sourcemap --bundle --platform=node --format=cjs --target=esnext",
 		"build": "del-cli ./dist && npm run build:esm && npm run build:cjs && tsc"
 	},
@@ -35,15 +35,19 @@
 	"author": "Thundercraft5",
 	"license": "MIT",
 	"dependencies": {
-		"@thundercraft5/node-errors": "1.0.13",
+		"@thundercraft5/node-errors": "latest",
 		"node-cron": "3.0.1"
 	},
 	"devDependencies": {
-		"@thundercraft5/eslint-plugin": "latest",
-		"@thundercraft5/tsconfig": "latest",
+		"@rollup/plugin-commonjs": "22.0.0",
+		"@rollup/plugin-node-resolve": "13.3.0",
+		"@rollup/plugin-typescript": "8.3.3",
+		"@thundercraft5/eslint-plugin": "file:../../Libraries/NodeJS/eslint-plugin",
+		"@thundercraft5/tsconfig": "file:../../Libraries/NodeJS/tsconfig",
 		"@types/node-cron": "3.0.1",
 		"del-cli": "4.0.1",
 		"eslint": "8.17.0",
+		"rollup": "2.75.6",
 		"ts-node": "10.8.1",
 		"typescript": "4.8.0-dev.20220604"
 	}
