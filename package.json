@@ -1,6 +1,6 @@
 {
 	"name": "@thundercraft5/node-cron-manager",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"type": "module",
 	"keywords": [
 		"large",
