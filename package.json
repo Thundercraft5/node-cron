@@ -1,6 +1,6 @@
 {
 	"name": "@thundercraft5/node-cron-jobs",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"type": "module",
 	"keywords": [
 		"large",
