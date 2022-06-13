@@ -1,6 +1,5 @@
 import type { ScheduledTask } from "node-cron";
-import type { CronFunc } from "./CronJobManager";
-import type CronJobManager from "./CronJobManager";
+import type { CronFunc, default as CronJobManager } from "./CronJobManager";
 export default class CronJob<I extends string = string> {
     cronTask: ScheduledTask;
     interval: I;
